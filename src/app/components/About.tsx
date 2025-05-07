@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function About() {
   const content = `
     Com mais de 8 anos de experiência na área da saúde e atuando por 3 anos como Enfermeira Obstetra, descobri uma nova paixão pela tecnologia.
@@ -13,8 +15,18 @@ export default function About() {
       <h2 className="text-3xl font-bold text-pink-600 text-center mb-10">
         Sobre Mim
       </h2>
-      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg">
-        <p className="text-gray-700 text-lg leading-relaxed">
+      <div className="max-w-4xl mx-auto bg-white p-8 rounded-lg shadow-lg relative overflow-hidden group">
+        {/* Imagem com animação */}
+        <div className="absolute -top-10 -right-10 w-40 h-40 md:w-60 md:h-60 opacity-20 group-hover:opacity-40 transition-opacity duration-300">
+          <Image
+            src="/img/controller.png"
+            alt="Controlador"
+            layout="fill"
+            objectFit="contain"
+          />
+        </div>
+        {/* Conteúdo do card */}
+        <p className="text-gray-700 text-lg leading-relaxed relative z-10">
           {content}
         </p>
       </div>
