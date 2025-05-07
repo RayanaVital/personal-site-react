@@ -27,7 +27,7 @@ export default function About() {
           {items.map((item, index) => (
             <div
               key={index}
-              className={`p-6 rounded-lg shadow-lg text-white text-center transition-transform transform hover:scale-105 ${colors[index % colors.length]}`}
+              className={`p-6 rounded-lg shadow-md text-white text-center transition-transform transform hover:scale-105 ${colors[index % colors.length]}`}
             >
               {item}
             </div>
